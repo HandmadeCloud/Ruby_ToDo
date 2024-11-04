@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -10,5 +11,6 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  # TODO: 레일즈가 root 액션을 posts controller의 index액션과 연결하는 것을 의미
+  root :to => "home#index"
 end

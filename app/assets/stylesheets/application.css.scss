@@ -1,0 +1,54 @@
+/* app/assets/stylesheets/application.css.scss */
+
+/* 헤더 스타일 */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  background-color: #333;
+  color: black;
+}
+
+header .logo {
+  width: 100px;
+  margin-right: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+/* 드롭다운 스타일 */
+.dropdown-menu {
+  display: none; /* 기본은 숨김 */
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  color: black;
+  list-style-type: none;
+  padding: 0.5em 0;
+  border: 1px solid #ccc;
+}
+
+.dropdown-menu li {
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+/* 드롭다운을 호버하면 메뉴가 보이도록 */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* 팝업 트리거 스타일 */
+.popup-trigger {
+  cursor: pointer;
+}

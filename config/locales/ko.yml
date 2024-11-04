@@ -1,0 +1,12 @@
+ko:
+  navigation:
+    destinations: "어디로 떠날까요?"
+    dates: "언제 떠날까요?"
+    my_reservations: "My Reservations"
+    cancellations: "Cancellations"
+    coupons: "Coupons"
+    wishlists: "Wishlists"
+    edit_profile: "Edit Profile"
+    message: "Message"
+    one_to_one_inquiry: "1:1 Inquiry"
+    language: "KOR"

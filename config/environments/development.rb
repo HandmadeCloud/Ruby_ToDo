@@ -31,6 +31,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.cache_classes = false  # 코드 변경 시 자동으로 반영
+  config.eager_load = false     # 필요한 클래스만 로드
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 

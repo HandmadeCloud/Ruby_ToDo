@@ -58,3 +58,4 @@ build-iPhoneSimulator/
 .idea/
 log/development.log
 config/database.yml
+config/master.key

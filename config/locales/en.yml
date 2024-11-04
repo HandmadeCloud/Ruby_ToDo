@@ -28,4 +28,14 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  navigation:
+    destinations: "Destinations"
+    dates: "Dates"
+    my_reservations: "My Reservations"
+    cancellations: "Cancellations"
+    coupons: "Coupons"
+    wishlists: "Wishlists"
+    edit_profile: "Edit Profile"
+    message: "Message"
+    one_to_one_inquiry: "1:1 Inquiry"
+    language: "ENG"
