@@ -10,32 +10,54 @@
     <!-- 헤더 섹션 -->
     <header id="header" class="container-wide" style="background: none">
       <!-- 로고 이미지 -->
-      <a href="<%= root_path %>">
-        <img src = "https://www.stayfolio.com/web/images/logo.svg" alt="StayFolio Logo" class = "logo">
-      </a>
+      <div class="logo">
+        <a style="filter: none;" href="<%= root_path %>">STAY PORTFOLIO</a>
+      </div>
+
+      <div class="whe gnb-responsive-margin">
+        <button type="button">
+          <span class="gnb-mo-small"><%= t('navigation.destinations') %></span>
+        </button>
+        <button type="button">
+          <span class="gnb-mo-small"><%= t('navigation.dates') %></span>
+        </button>
+      </div>
       <!-- 네비게이션 메뉴 -->
-      <nav>
-        <ul>
-          <li class="popup-trigger"><%= t('navigation.destinations') %></li>
-          <li class="popup-trigger"><%= t('navigation.dates') %></li>
-          <li><a href="#">FIND STAY</a></li>
-          <li><a href="#">PROMOTION</a></li>
-          <li><a href="#">JOURNAL</a></li>
-          <li><a href="#">PRE-ORDER</a></li>
-          <li>
+      <nav class="nav">
+        <ul class="menu">
+          <li class>
+            <a href="#">FIND STAY</a>
+          </li>
+          <li class>
+            <a href="#">PROMOTION</a>
+          </li>
+          <li class>
+            <a href="#">JOURNAL</a>
+          </li>
+          <li class>
+            <a href="#">PRE-ORDER</a>
+          </li>
+        </ul>
+        <ul class="etc">
+          <li class>
             <%# if current_user %>
               <%#= link_to t('my-page').upcase, my_page_path %>
             <%# else %>
               <%#= link_to to('login').upcase, login_path %>
             <%# end %>
           </li>
-          <li class="dropdown">
-            <span class="dropdown-trigger"><%= t('navigation.language') %></span>
-            <ul class = "dropdown-menu">
-              <li><%= link_to 'KOREAN', url_for(locale: :ko) %></li>
-              <li><%= link_to 'ENGLISH', url_for(locale: :en) %></li>
-            </ul>
         </ul>
+        <div class="nav_etc">
+          <div class="box">
+            <div class="box">
+              <div class="nav_tit language"><%= t('navigation.language') %></div>
+                <ul class = "open_list">
+                  <li><%= link_to 'KOREAN', url_for(locale: :ko) %></li>
+                  <li><%= link_to 'ENGLISH', url_for(locale: :en) %></li>
+                </ul>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 

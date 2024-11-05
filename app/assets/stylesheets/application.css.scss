@@ -10,8 +10,114 @@ header {
 }
 
 header .logo {
-  width: 100px;
-  margin-right: 20px;
+  text-indent: -99999px;
+}
+
+header {
+  .logo {
+    a {
+      background: url("https://www.stayfolio.com/web/images/logo.svg") no-repeat;
+      background-size: contain;
+      display: block;
+      width: 68px;
+      height: auto;
+      aspect-ratio: 17 / 11;
+      overflow: visible;
+
+      @media (max-width: 1024px) {
+        width: 68px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.whe{
+  .button{
+    &:nth-child(1){
+      background: url("https://www.stayfolio.com/web/images/where@3x.png") no-repeat 0 50%;
+      background-size: 20px 20px;
+    }
+    &:nth-child(2){
+      background: url("https://www.stayfolio.com/web/images/when@3x.png") no-repeat 0 50%;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+div{
+  display: block;
+  unicode-bidi: isolate;
+}
+
+button{
+  border: none;
+  color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav .menu {
+  border-right: 1px solid #ddd;
+  margin-right: 10px;
+  padding-right: 20px;
+}
+
+.nav .menu li a {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: Lato-Bold;
+  line-height: 25px;
+  color: #000;
+  display: block;
+}
+.nav .menu li {
+  float: left;
+  margin-left: 25px;
+}
+
+.nav_etc .box {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+.nav_etc .nav_tit {
+  position: relative;
+  font-size: 15px;
+  line-height: 40px;
+  color: #999;
+  cursor: pointer;
+  padding-left: 22px;
+}
+
+.nav_etc .open_list {
+  visibility: hidden;
+  opacity: 0;
+  padding: 7px 15px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  transition: all .2s;
+  width: 125px;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .1);
+}
+
+
+button, input, select, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-weight: 300;
+  font-family: SpoqaHanSans;
+  color: #181818;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  vertical-align: middle;
+  outline: none;
 }
 
 header nav ul {
@@ -51,4 +157,20 @@ header nav ul li {
 /* 팝업 트리거 스타일 */
 .popup-trigger {
   cursor: pointer;
+}
+
+body {
+  font-family: SpoqaHanSans,NotoSansKR,Abel,Lato-Bold,Droid Sans,AppleSDGothicNeo,"sans-serif";
+  font-weight: 300;
+  color: #181818;
+  background-color: #fff;
+  line-height: 1;
+  font-size: 14px
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/notosanskr/v27/Pby6FmXiEBPT4ITbgNA5CgmOelzCBg.woff2') format('woff2');
 }

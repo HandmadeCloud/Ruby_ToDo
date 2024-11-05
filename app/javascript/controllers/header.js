@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const dropdownTrigger = document.querySelector('.dropdown-trigger');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownTrigger = document.querySelector('.nav_etc .nav_tit');
+    const dropdownMenu = document.querySelector('.nav_etc .open_list');
 
     dropdownTrigger.addEventListener('click', () => {
         dropdownMenu.classList.toggle('show'); // 'show' 클래스로 드롭다운 메뉴 표시
