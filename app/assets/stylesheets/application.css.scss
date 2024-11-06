@@ -32,13 +32,29 @@ header {
   }
 }
 
-.whe{
-  .button{
-    &:nth-child(1){
+.whe {
+  button {
+    display: inline-block;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    padding: 0 0 0 30px;
+    line-height: 45px;
+
+    &:nth-child(1) {
       background: url("https://www.stayfolio.com/web/images/where@3x.png") no-repeat 0 50%;
       background-size: 20px 20px;
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 15px;
+        margin: 0 25px;
+        background: #888;
+        vertical-align: middle;
+      }
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       background: url("https://www.stayfolio.com/web/images/when@3x.png") no-repeat 0 50%;
       background-size: 20px 20px;
     }
@@ -57,52 +73,64 @@ button{
   outline: none;
 }
 
-.nav .menu {
-  border-right: 1px solid #ddd;
-  margin-right: 10px;
-  padding-right: 20px;
+.nav {
+  display: flex;
+  align-items: center;
+  .menu {
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+    padding-right: 20px;
+    li {
+      float: left;
+      margin-left: 25px;
+      a {
+        font-size: 15px;
+        font-weight: 700;
+        font-family: Lato-Bold;
+        //line-height: 25px;
+        color: #000;
+        display: block;
+      }
+    }
+  }
 }
 
-.nav .menu li a {
-  font-size: 15px;
-  font-weight: 700;
-  font-family: Lato-Bold;
-  line-height: 25px;
-  color: #000;
-  display: block;
-}
-.nav .menu li {
-  float: left;
-  margin-left: 25px;
-}
+.nav_etc {
+  .box {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+  }
 
-.nav_etc .box {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 0 10px;
-}
+  .nav_tit {
+    position: relative;
+    font-size: 15px;
+    line-height: 40px;
+    color: #999;
+    cursor: pointer;
+    padding-left: 22px;
+    .login{
+      &:before {
+        background: url("https://www.stayfolio.com/web/images/ico_login.svg") no-repeat 50%;
+        background-size: cover;
+      }
+    }
+  }
 
-.nav_etc .nav_tit {
-  position: relative;
-  font-size: 15px;
-  line-height: 40px;
-  color: #999;
-  cursor: pointer;
-  padding-left: 22px;
-}
 
-.nav_etc .open_list {
-  visibility: hidden;
-  opacity: 0;
-  padding: 7px 15px;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  position: absolute;
-  top: 60px;
-  right: -20px;
-  transition: all .2s;
-  width: 125px;
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .1);
+  .open_list {
+    visibility: hidden;
+    opacity: 0;
+    padding: 7px 15px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    top: 60px;
+    right: -20px;
+    transition: all 0.2s;
+    width: 125px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 
@@ -168,9 +196,25 @@ body {
   font-size: 14px
 }
 
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -webkit-text-size-adjust: none;
+
+}
+
 @font-face {
   font-family: NotoSansKR;
   font-style: normal;
   font-weight: 400;
   src: url('https://fonts.gstatic.com/s/notosanskr/v27/Pby6FmXiEBPT4ITbgNA5CgmOelzCBg.woff2') format('woff2');
 }
+
+//@font-face {
+//  font-family: Lato-Bold;
+//  font-style: normal;
+//  font-weight: 400;
+//  src: url('') format('woff2');
+//}

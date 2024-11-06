@@ -39,13 +39,16 @@
           </li>
         </ul>
         <ul class="etc">
-          <li class>
+          <div class="nav_etc">
+            <div class="box">
+              <div class="nav_tit login" href="/login?returnUrl=%2F">LOGIN</div>
+            </div>
+          </div>
             <%# if current_user %>
               <%#= link_to t('my-page').upcase, my_page_path %>
             <%# else %>
-              <%#= link_to to('login').upcase, login_path %>
+              <%#= link_to t('login').upcase, login_path %>
             <%# end %>
-          </li>
         </ul>
         <div class="nav_etc">
           <div class="box">
