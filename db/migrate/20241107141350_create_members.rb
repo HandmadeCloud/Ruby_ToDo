@@ -5,7 +5,7 @@ class CreateMembers < ActiveRecord::Migration[7.2]
       t.string :password, null: false
       t.string :name, null: false
       t.string :phone_number
-      t.string :status
+      t.string :status, default: 1
       t.string :role, default: "member"
 
       t.timestamps

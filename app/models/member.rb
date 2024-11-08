@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 class Member < ApplicationRecord
 
-  enum :status, { :active => 0, :inactive => 1, :suspended => 2 }
+  enum :status, { :inactive => 0, :active => 1, :suspended => 2 }
 
   # 유효성 검증
   validates :email,
@@ -18,7 +18,7 @@ class Member < ApplicationRecord
             length: { maximum: 50 }
   validates :phone_number,
             format: {
-              with: /\A[+?0-9]+\z/,
+              with: /\A\d{10,11}\z/,
               message: "올바른 휴대폰번호 형식을 지켜주세요"
             }
 end

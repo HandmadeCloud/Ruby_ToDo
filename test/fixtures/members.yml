@@ -1,21 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  emails: MyString
+  email: MyString
   password: MyString
   name: MyString
   phone_number: MyString
   created_at: 2024-11-07 23:13:50
-  status: MyString
-  deleted_at: 2024-11-07 23:13:50
+  status: 1
   role: MyString
 
 two:
-  emails: MyString
+  email: MyString
   password: MyString
   name: MyString
   phone_number: MyString
   created_at: 2024-11-07 23:13:50
-  status: MyString
-  deleted_at: 2024-11-07 23:13:50
+  status: 1
   role: MyString
