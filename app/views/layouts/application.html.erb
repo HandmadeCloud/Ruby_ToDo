@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Stay Portfolio" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -18,6 +18,100 @@
   </head>
 
   <body>
-    <%= yield %>
+  <!-- 헤더 섹션 -->
+  <div id="gbnBgColor">
+  <header id="header" class="container-wide" style="background: none">
+    <div class="header_warp gnb-responsive-css only-pc">
+      <!-- 로고 이미지 -->
+      <div class="logo">
+        <a style="filter: none;" href="<%= root_path %>">STAY PORTFOLIO</a>
+      </div>
+      <div class="whe gnb-responsive-margin">
+        <button type="button">
+          <span class="gnb-mo-small"><%= t('navigation.destinations') %></span>
+        </button>
+        <button type="button" class="gnb-when-mo-small">
+          <span class="gnb-mo-small"><%= t('navigation.dates') %></span>
+        </button>
+      </div>
+    <!-- 네비게이션 메뉴 -->
+    <nav class="nav">
+      <ul class="menu">
+        <li class>
+          <a href="#">FIND STAY</a>
+        </li>
+        <li class>
+          <a href="#">PROMOTION</a>
+        </li>
+        <li class>
+          <a href="#">JOURNAL</a>
+        </li>
+        <li class>
+          <a href="#">PRE-ORDER</a>
+        </li>
+      </ul>
+      <ul class="etc">
+        <div class="nav_etc">
+          <div class="box">
+            <div class="nav_tit login" href="/login?returnUrl=%2F">LOGIN</div>
+          </div>
+        </div>
+      </ul>
+        <%# if current_user %>
+        <%#= link_to t('my-page').upcase, my_page_path %>
+        <%# else %>
+        <%#= link_to t('login').upcase, login_path %>
+        <%# end %>
+
+      <div class="nav_etc">
+        <div class="box">
+          <div class="box">
+            <div class="nav_tit language"><%= t('navigation.language') %></div>
+            <ul class = "open_list">
+              <li><%= link_to 'KOREAN', url_for(locale: :ko) %></li>
+              <li><%= link_to 'ENGLISH', url_for(locale: :en) %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    </div>
+  </header>
+  </div>
+
+  <footer id="footer" class="hide_footer">
+    <div class="container_wide">
+      <div class="footer_cont">
+        <div class="logo">
+          <img src="https://www.stayfolio.com/web/images/logo.png" alt="STAYPORTFOLIO">
+        </div>
+        <div class="menu-cs">
+          <ul class="menu">
+            <li>
+              <a target="_self" rel="noreferrer" href="/about">ABOUT</a>
+            </li>
+            <li>
+              <a target="_self" rel="noreferrer" href="/4-point-approach">4 POINT APPROACH</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="https://page.stibee.com/subscriptions/243310?groupIds=238993">NEWSLETTER</a>
+            </li>
+            <li>
+              <a target="_blank" rel="noreferrer" href="http://stayfolio.kr/career">CAREERS</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer_address">
+        <span class="info" style="word-break:keep-all">
+          상호명 (주) 스테이포트폴리오
+        </span>
+      </div>
+    </div>
+
+
+  </footer>
+
   </body>
 </html>
