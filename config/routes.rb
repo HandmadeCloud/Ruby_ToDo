@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get "home/index"
 
-  get 'login', to: 'sessions#new', as: 'login'
+  post 'signup', to: 'members#signup'
 
   get "up" => "rails/health#show", as: :rails_health_check
 

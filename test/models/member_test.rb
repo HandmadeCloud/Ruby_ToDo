@@ -1,7 +1,7 @@
 require "./test/test_helper"
 
 class MemberTest < ActiveSupport::TestCase
-  test "Valid Member Create" do
+  test "Valid member Create" do
     member = Member.new(
       email: "test@example.com",
       password: "password",

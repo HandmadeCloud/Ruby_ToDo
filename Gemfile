@@ -18,6 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 # 'css 꾸미기에 사용되는 의존성'
 gem 'sassc-rails'
+# CORS
+gem 'rack-cors'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
